@@ -13,7 +13,7 @@ typedef unsigned packed_t;
 int xbyte(packed_t word, int bytenum)
 {
     // Assume: 0 <= bytenum <= 3
-    
+    return (int)(word << ((3 - bytenum) << 3)) >> 24;
 
 }
 
